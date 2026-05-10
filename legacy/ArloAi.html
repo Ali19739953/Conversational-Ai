@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arlo — AI Chat</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+    </div>
+    <span class="logo-name">Arlo</span>
+  </div>
+  <div class="header-right">
+    <span class="rate-indicator" id="rate-label">8 / 8 left</span>
+    <div class="badge">
+      <div class="badge-dot"></div>
+      claude-sonnet-4
+    </div>
+  </div>
+</header>
+
+<!-- CHAT -->
+<div class="chat-scroll" id="chat-scroll">
+  <div class="chat-inner" id="chat-inner">
+    <div class="empty" id="empty">
+      <div class="empty-icon">✦</div>
+      <div class="empty-title">What's on your mind?</div>
+      <div class="empty-sub">Arlo is an AI-native app with live Claude integration, guardrails, and rate limiting built in.</div>
+      <div class="prompts">
+        <div class="prompt-chip" onclick="useSuggestion('How do multi-agent RAG systems work?')">Multi-agent RAG</div>
+        <div class="prompt-chip" onclick="useSuggestion('What are the tradeoffs between GPT-4, Claude, and Gemini?')">LLM tradeoffs</div>
+        <div class="prompt-chip" onclick="useSuggestion('Design an AI pipeline for e-commerce personalization')">E-commerce AI</div>
+        <div class="prompt-chip" onclick="useSuggestion('Explain QLoRA fine-tuning vs full fine-tuning')">QLoRA explained</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INPUT -->
+<div class="input-wrap">
+  <div class="input-inner">
+    <div class="rate-limit-msg" id="rate-limit-msg"></div>
+    <div class="input-box">
+      <textarea
+        id="msg-input"
+        placeholder="Message Arlo..."
+        rows="1"
+        maxlength="1500"
+      ></textarea>
+      <button class="send-btn" id="send-btn" onclick="send()" title="Send">
+        <svg viewBox="0 0 24 24">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+    <div class="input-footer">
+      <span class="input-meta" id="char-count">0 / 1500</span>
+      <div class="rate-bar-wrap">
+        <span class="input-meta">rate limit</span>
+        <div class="rate-bar">
+          <div class="rate-bar-fill" id="rate-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
