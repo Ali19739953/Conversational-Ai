@@ -3,8 +3,9 @@ import { useEffect, useRef, useState } from "react";
 const PROMPTS = ["I'm anxious", "Can't sleep", "Grounding", "Hard day"];
 
 const HOTLINES = [
-  { label: "US & Canada — 988 Suicide & Crisis Lifeline", num: "988" },
-  { label: "UK & Ireland — Samaritans", num: "116 123" },
+  { label: "UAE — National Mental Support Line (800 HOPE, 24/7)", num: "800 4673" },
+  { label: "UAE — Estijaba Helpline (SEHA, multilingual)", num: "800 1717" },
+  { label: "UAE — Emergency services", num: "999" },
   { label: "International directory", num: "findahelpline.com", href: "https://findahelpline.com" },
 ];
 
@@ -279,11 +280,9 @@ function EmptyState({ onPick }) {
       <h1 className="empty-title">How are you feeling today?</h1>
       <p className="empty-sub">
         Arlo is a companion for everyday stress and reflection — not a therapist, and not a
-        substitute for professional care. If you need support now, visit{" "}
-        <a href="https://findahelpline.com" target="_blank" rel="noopener noreferrer">
-          findahelpline.com
-        </a>
-        .
+        substitute for professional care. If you need support now in the UAE, call the national
+        Mental Support Line on <a href="tel:8004673">800 HOPE (800 4673)</a> or, in an emergency,
+        dial <a href="tel:999">999</a>.
       </p>
       <div className="prompts" role="list">
         {PROMPTS.map((p) => (

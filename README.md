@@ -8,8 +8,6 @@ A small full-stack chat prototype: a non-clinical mental-wellness companion with
 - **Security**: API key stays server-side (`backend/.env`)
 - **Guardrails + rate limiting**: enforced on the **server** (the client mirrors them only for UX)
 
-> Arlo is not a therapist. If you are in crisis: US — call/text **988**; UK & ROI — Samaritans **116 123**; international — https://findahelpline.com.
-
 ### Project layout
 
 - `frontend/` — Vite React app
