@@ -11,7 +11,7 @@ const HOTLINES = [
 
 const MAX_CHARS = 2000;
 const MAX_HISTORY = 12;
-const RATE_LIMIT_PER_MIN = 10;
+const RATE_LIMIT_PER_MIN = 20;
 const RATE_WINDOW_MS = 60_000;
 
 const CLIENT_BLOCKED_PATTERNS = [
