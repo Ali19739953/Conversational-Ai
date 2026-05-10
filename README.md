@@ -19,19 +19,33 @@ A small full-stack chat prototype: a non-clinical mental-wellness companion with
 
 ### Setup
 
-1) Backend env:
+1) **Get a Groq API key** (free tier, no credit card):
 
-```
-cp backend/.env.example backend/.env
-# set GROQ_API_KEY=...
-```
+   1. Sign in at https://console.groq.com
+   2. Open **API Keys** → **Create API Key**: https://console.groq.com/keys
+   3. Copy the `gsk_…` key — you will not see it again.
 
-2) Install:
+   Docs: https://console.groq.com/docs/quickstart
 
-```bash
-cd backend && npm install
-cd ../frontend && npm install
-```
+2) **Set your key in the backend env file:**
+
+   ```bash
+   cp backend/.env.example backend/.env
+   # then edit backend/.env and set:
+   #   GROQ_API_KEY=gsk_your_key_here
+   ```
+
+   Notes:
+   - `backend/.env` is git-ignored — never commit your key.
+   - If you accidentally leak a key, **rotate it immediately** in the Groq console (the dashboard supports revoke + re-issue).
+   - The backend will refuse to start if `GROQ_API_KEY` is missing.
+
+3) **Install dependencies:**
+
+   ```bash
+   cd backend && npm install
+   cd ../frontend && npm install
+   ```
 
 ### Run
 
