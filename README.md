@@ -1,4 +1,5 @@
 ## Arlo — Mental-Wellness Companion (Vite + React + Node + Groq)
+Strict Mode enabled still in dev 
 
 A small full-stack chat prototype: a non-clinical mental-wellness companion with **server-enforced rate limiting and guardrails**.
 
